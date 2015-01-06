@@ -34,7 +34,7 @@ def resize_image(in_file, out_file):
     img = Image.open(in_file)
     img.thumbnail((IMAGE_MAX_SIZE, IMAGE_MAX_SIZE), Image.ANTIALIAS)
     # high quality because from this image we will create thumbnails
-    img.save(out_file, img.format or 'JPEG', quality=95)
+    img.save(out_file, img.format or 'JPEG', quality=90)
 
 
 def process_image(f, user_id):
