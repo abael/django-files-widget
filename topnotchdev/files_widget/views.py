@@ -1,13 +1,11 @@
 from django.http import Http404, HttpResponse
 from django.conf import settings
 from django.template.loader import render_to_string
-from django.core.files.storage import default_storage
-from django.core.files.base import ContentFile
 
 import json
 
-from settings import FILES_DIR
 from controllers import ImagePath
+from utils import process_image
 
 
 def upload(request):
@@ -17,10 +15,8 @@ def upload(request):
     response_data = {}
     if request.is_ajax():
         if request.FILES:
-            files = request.FILES.values()[0]
-            path = default_storage.save('{}/{}/{}'.format(FILES_DIR,
-                                                          request.user.pk,
-                                                          files.name), ContentFile(files.read()))
+            image = request.FILES.values()[0]
+            path = process_image(image, request.user.id)
             try:
                 preview_size = request.POST['preview_size']
             except KeyError:

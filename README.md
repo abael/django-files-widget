@@ -68,6 +68,8 @@ Quick Start
     FILES_WIDGET_FILES_DIR           # 'uploads/files_widget/'
     FILES_WIDGET_JQUERY_PATH         # (jQuery 1.9.1 from Google)
     FILES_WIDGET_JQUERY_UI_PATH      # (jQuery UI 1.10.3 from Google)
+    FILES_WIDGET_IMAGE_MAX_SIZE      # None (pixel value - image will be cropped on the long side)
+    FILES_WIDGET_HASH_NAMES          # False, if True will return md5 of name truncated to the first 10 values
 
 ### In `urls.py` ###
 
@@ -144,6 +146,8 @@ Navigation
 - [`FILES_WIDGET_FILES_DIR`](#FILES_WIDGET_FILES_DIR)
 - [`FILES_WIDGET_JQUERY_PATH`](#FILES_WIDGET_JQUERY_PATH)
 - [`FILES_WIDGET_JQUERY_UI_PATH`](#FILES_WIDGET_JQUERY_UI_PATH)
+- [`FILES_WIDGET_IMAGE_MAX_SIZE`](#FILES_WIDGET_IMAGE_MAX_SIZE)
+- [`FILES_WIDGET_HASH_NAMES`](#FILES_WIDGET_HASH_NAMES)
 
 ### Model Fields
 

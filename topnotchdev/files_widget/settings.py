@@ -12,4 +12,5 @@ FILE_TYPES = getattr(settings, 'FILES_WIDGET_FILE_TYPES', None)
 USE_TRASH = getattr(settings, 'FILES_WIDGET_USE_TRASH', False)
 TRASH_DIR = getattr(settings, 'FILES_WIDGET_TRASH_DIR', 'uploads/trash/files_widget/')
 IMAGE_QUALITY = getattr(settings, 'FILES_WIDGET_IMAGE_QUALITY', 50)
-
+IMAGE_MAX_SIZE = getattr(settings, 'FILES_WIDGET_IMAGE_MAX_SIZE', None)
+HASH_NAMES = getattr(settings, 'FILES_WIDGET_HASH_NAMES', False)
